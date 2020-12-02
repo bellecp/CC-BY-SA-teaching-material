@@ -58,7 +58,7 @@ successively until $\tau_c$, then output the current state.
 ## Part I (Forward)
 
 Define a grand coupling as follows. For any $x\in \mathcal X$,
-define $X_0^x = x$ and $X_t^x = f_t(X_{t-1})$,
+define $X_0^x = x$ and $X_t^x = f_t(X_{t-1}^x)$,
 so that $X_t^x = f_t\circ f_{t-1} \circ ... \circ f_1(x)$.
 The coalescence time $\tau_c$ is the first time all the Markov Chains $(X_t^x)_{x\in\mathcal X}$ have met.
 
@@ -156,7 +156,8 @@ $P(i,\max(i-1,0)) = 1/2$ and 0 elsewhere, as in the graph below.
     b.
     Show that the event $\{M\le t\}$ can be simply expressed in terms of
     $f_1\circ f_2\circ f_3\circ ... \circ f_t(0)$ and $f_1\circ f_2\circ f_3\circ ... \circ f_t(n)$.
-    b. Explain why, in this case and thanks to question $f(i)\le f(j)$ always holds for any $i\le j$, the algorithm of Part II
+    b. Explain why, in this case and thanks to question a.,
+    $f(i)\le f(j)$ always holds for any $i\le j$, the algorithm of Part II
     that outputs a random variable with distribution $\pi$ can be greatly simplified.
     \usetikzlibrary{automata, positioning}
     \begin{tikzpicture}
